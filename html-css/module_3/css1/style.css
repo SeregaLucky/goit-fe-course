@@ -35,6 +35,7 @@ body{
     transition: color 0.2s;
     text-decoration: none;
 }
+.list-link:focus,
 .list-link:hover{
     color: #00ABF7;
 }
