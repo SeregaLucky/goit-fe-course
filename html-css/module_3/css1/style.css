@@ -48,6 +48,7 @@ body{
 }
 .info-item{
     display: inline-block;
+	vertical-align: top;
     width: 420px;
     font-size: 14px;
 }
@@ -55,7 +56,7 @@ body{
 	margin: 0 60px 0 0;
 }
 .info-item:not(:nth-last-child(-n+2)){
-    padding: 0 0 132px 0;
+    margin-bottom: 132px;
 }
 .img-info{
     margin: 0 0 32px 0;
@@ -67,7 +68,7 @@ body{
 }
 .headline{
     margin: 0;
-    font-size: 30px;
+    font-size: 32px;
     margin: 0 0 34px 0;
     font-weight: 400;
 }
