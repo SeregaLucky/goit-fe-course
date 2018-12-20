@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     line-height: 1;
-    background: orange;
+    /* background: orange; */
     color: #626262;
 }
 .wrapper{
@@ -51,7 +51,7 @@ body{
     font-size: 14px;
 }
 .info-item:nth-child(2n+1){
-margin: 0 60px 0 0;
+	margin: 0 60px 0 0;
 }
 .info-item:not(:nth-last-child(-n+2)){
     padding: 0 0 132px 0;
@@ -62,12 +62,13 @@ margin: 0 60px 0 0;
 .one-word{
     margin: 0 0 28px 0;
     color: #b4ad9e;
+	text-transform: uppercase;
 }
 .headline{
     margin: 0;
     font-size: 30px;
     margin: 0 0 34px 0;
-    /* font-weight: 400; */
+    font-weight: 400;
 }
 .text-info{
     margin: 0;
@@ -75,7 +76,7 @@ margin: 0 60px 0 0;
 }
 .load-more{
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 70px auto;
     width: 162px;
     height: 58px;
     border: 1px solid #626262;
@@ -84,6 +85,7 @@ margin: 0 60px 0 0;
     cursor: pointer;
     transition: 0.25s;
 }
+.load-more:focus,
 .load-more:hover{
     background-color: #00ABF7;
 	color: #FFF;
