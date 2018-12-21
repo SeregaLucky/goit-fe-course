@@ -12,8 +12,10 @@ body{
 
 /* HEADER */
 .header{
-    padding: 77px 0 0 0;
-    margin: 0 0 104px 0;
+    /* padding: 77px 0 0 0; */
+    padding: 72px 0 0 0;
+    /* margin: 0 0 104px 0; */
+    margin: 0 0 100px 0;
 }
 .menu-top__list{
     font-size: 0;
@@ -43,7 +45,8 @@ body{
 .info-list{
     font-size: 0;
     padding: 0;
-    margin: 0 0 54px 0;
+    /* margin: 0 0 54px 0; */
+    margin: 0 0 50px 0;
 }
 .info-item{
     display: inline-block;
@@ -61,14 +64,16 @@ body{
     margin: 0 0 32px 0;
 }
 .one-word{
-    margin: 0 0 28px 0;
+    /* margin: 0 0 28px 0; */
+    margin: 0 0 20px 0;
     color: #b4ad9e;
 	text-transform: uppercase;
 }
 .headline{
     margin: 0;
-    font-size: 32px;
-    margin: 0 0 34px 0;
+    font-size: 30px;
+    /* margin: 0 0 37px 0; */
+    margin: 0 0 26px 0;
     font-weight: 400;
 }
 .text-info{
