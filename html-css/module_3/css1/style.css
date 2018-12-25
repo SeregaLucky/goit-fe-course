@@ -63,6 +63,7 @@ body{
 	height: auto;
 }
 .one-word{
+	font-family: 'Ubuntu', sans-serif;
     margin: 0 0 20px 0;
     color: #b4ad9e;
 	text-transform: uppercase;
