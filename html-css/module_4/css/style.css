@@ -58,9 +58,6 @@ img{
     float: left;
     line-height: 1;
 }
-/* .list-item:not(:last-child){ */
-    /* margin: 0 36px 0 0; */
-/* } */
 .list-link{
     text-decoration: none;
     color: #0f0101;
@@ -100,7 +97,7 @@ img{
     line-height: 1;
     margin: 0 0 130px 0;
 }
-.headline-products::before{
+.headline-products::after{
     content: "";
     display: inline-block;
     position: absolute;
@@ -144,28 +141,12 @@ img{
     font-weight: 900;
     background: #323232;
     color: #FFF;
-    width: calc(100% - 14px);
-    height: 40px;
+	width: 100%;
+	box-sizing: border-box;
     padding-left: 14px;
     transition: .2s;
     letter-spacing: -0.02em;
 }
-/* .text-price::before{
-    content: '';
-    display: inline-block;
-    width: 255px;
-    height: 40px;
-    background: #1abc9c;
-    position: absolute;
-    top: 0;
-    left: -255px;
-    opacity: 0.2;
-    
-}
-.text-price:hover::before{
-    left: -0;
-    opacity: 1;
-} */
 .products-item:hover .text-price{
     background: #1abc9c;
 }
@@ -205,7 +186,7 @@ img{
     line-height: 1;
     margin: 0 0 120px 0;
 }
-.headline-news::before{
+.headline-news::after{
     content: "";
     display: inline-block;
     position: absolute;
@@ -246,7 +227,7 @@ img{
     line-height: 26px;
     letter-spacing: -0.02em;
 }
-.headline3-news::before{
+.headline3-news::after{
     content: "";
     display: inline-block;
     position: absolute;
@@ -275,6 +256,7 @@ img{
     line-height: 50px;
     border-radius: 3px;
     letter-spacing: -0.02em;
+	transition: .1s;
 }
 .a-bottom:focus,
 .a-bottom:hover{
