@@ -9,12 +9,13 @@ img{
 }
 .clearfix:after {
 	content: "";
-    display: table;    
+    display: table;
     clear: both;
 }
 .wrapper{
     width: 1110px;
     margin: 0 auto;
+	/* overflow: hidden; */
 }
 
 
@@ -29,6 +30,16 @@ img{
     float: left;
     text-decoration: none;
     line-height: 1;
+	animation: logo-down .5s .25s forwards;
+	transform: translateY(-200px);
+}
+@keyframes logo-down{
+	0%{
+		
+	}
+	100%{
+		transform: translateY(0);
+	}
 }
 .h1-logo{
     margin: 0;
@@ -39,11 +50,41 @@ img{
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: -0.02em;
+	
+	position: relative;
 }
 .h1-logo::first-letter{
     color: #1abc9c;
     font-weight: 900;
 }
+.h1-logo:after{
+	position: absolute;
+	content: '';
+	display: inline-block;
+	height: 175px;
+	width: 175px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 100px solid rgba(26,188,156, 0);
+	border-radius: 50%;
+	animation: border-go 5s 0.75s infinite;
+}
+@keyframes border-go{
+	0%{
+		border: 100px solid rgba(26,188,156, 0);
+		animation-delay: 10s;
+	}
+	25%{
+		border: 110px solid rgba(26,188,156, 0.1);
+	}
+	100%{		
+		height: 275px;
+		width: 275px;
+		border: 160px solid rgba(26,188,156, 0);
+	}
+}
+
 /* MENU-TOP */
 .menu-top{
     float: right;
@@ -101,7 +142,7 @@ img{
     content: "";
     display: inline-block;
     position: absolute;
-    top: 66px;
+    bottom: -32px;
     left: 50%;
     transform: translateX(-50%);
     width: 164px;
@@ -188,7 +229,7 @@ img{
     content: "";
     display: inline-block;
     position: absolute;
-    top: 66px;
+    bottom: -32px;
     left: 50%;
     transform: translateX(-50%);
     width: 164px;
@@ -229,7 +270,7 @@ img{
     content: "";
     display: inline-block;
     position: absolute;
-    top: 62px;
+    bottom: -10px;
     left: 0;
     width: 136px;
     height: 3px;
