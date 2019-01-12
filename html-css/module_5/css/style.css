@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.clearfix:after {
+	content: "";
+    display: table;
+    clear: both;
+}
+.wrapper{
+    width: 1110px;
+    margin: 0 auto;
+}
+
+
+					/* !!!!!!--HEADER--!!!!!! */
+/* LOGO */
+.header{
+	position: relative;
+    padding: 38px 0 0 0;
+    margin: 0 0 104px 0;
+}
+.header:before{
+	position: absolute;
+	content: '';
+	display: inline-block;
+	height: 160px;
+	width: 160px;
+	top: 52px;
+	left: 40px;
+	transform: translate(-50%, -50%);
+	border: 100px solid rgba(26,188,156, 0);
+	border-radius: 50%;
+	animation: border-go 5s 1s infinite;
+	z-index: -1;
+}
+@keyframes border-go{
+	0%{
+		border: 100px solid rgba(26,188,156, 0);
+	}
+	25%{
+		border: 110px solid rgba(26,188,156, 0.1);
+	}
+	100%{		
+		height: 270px;
+		width: 270px;
+		border: 140px solid rgba(26,188,156, 0);
+	}
+}
+.a-logo{
+    float: left;
+    text-decoration: none;
+    line-height: 1;
+	animation: logo-down .5s .25s forwards;
+	transform: translateY(-200px);
+}
+@keyframes logo-down{
+	0%{
+		
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+.h1-logo{
+    margin: 0;
+    line-height: 1;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #555252;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+.h1-logo::first-letter{
+    color: #1abc9c;
+    font-weight: 900;
+}
+
+
+/* MENU-TOP */
+.menu-top{
+    float: right;
+    margin: 7px 0 0 0;
+}
+.menu-top__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list-item{
+    float: left;
+    line-height: 1;
+}
+.list-link{
+    text-decoration: none;
+    color: #0f0101;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: .1s;
+}
+.list-item:not(:last-child) .list-link{
+    padding: 0 16px 0 0;
+}
+.list-item:not(:first-child) .list-link{
+    padding-left: 16px;
+}
+.list-link:focus,
+.list-link:hover{
+    color: #1abc9c;
+}
