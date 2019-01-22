@@ -156,7 +156,6 @@ img{
 }
 .products-item{
     width: 255px;
-    height: 322px;
     background: #e9f0fd;
     list-style: none;
     float: left;
@@ -219,7 +218,6 @@ img{
 }
 .news-item{
     width: 348px;
-    min-height: 496px;
     list-style: none;
     float: left;
 }
