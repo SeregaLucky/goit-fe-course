@@ -1,0 +1,11 @@
+@media all and (min-width: 1110px) {
+	:root{
+		--wrapper-f: 1110px;
+	}
+}
+
+@media (max-width: 1109px) {
+	:root{
+		--wrapper-f: 600px;
+	}
+}
