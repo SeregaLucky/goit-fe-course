@@ -339,6 +339,7 @@ img{
     background: #1abc9c;
 }
 .text-products__link{
+	text-decoration: none;
     padding: 0 0 0 14px;
     color: #fff;
     display: block;
