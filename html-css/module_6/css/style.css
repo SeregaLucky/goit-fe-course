@@ -292,10 +292,14 @@ img{
     justify-content: space-between;
 }
 .team-img-fon{
-    background: var(--color-green);
+    /* background: var(--color-green); */
     margin: 0;
 
-    position: relative;
+    /* position: relative; */
+}
+.team-img-fon-cont{
+	background: var(--color-green);
+	position: relative;
 }
 .team-only-img{
     position: relative;
