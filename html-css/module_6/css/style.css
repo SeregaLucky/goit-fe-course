@@ -43,6 +43,8 @@ img{
     color: var(--color-dark);
     font-size: 24px;
     margin-bottom: 20px;
+	display: block;
+	text-transform: none;
 }
 .headline2{
     padding: 0;
@@ -149,7 +151,6 @@ img{
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
 }
 .header-item{
     list-style: none;
@@ -287,15 +288,15 @@ img{
     line-height: 24px;
 }
 .team-list{
-    list-style: none;
     display: flex;
     justify-content: space-between;
 }
+.team-item{
+	list-style: none;
+	flex: 0 0 380px;
+}
 .team-img-fon{
-    /* background: var(--color-green); */
     margin: 0;
-
-    /* position: relative; */
 }
 .team-img-fon-cont{
 	background: var(--color-green);
@@ -397,13 +398,10 @@ img{
 
 /* !!!!!!--FOOTER--!!!!!! */
 .footer-down{
-    padding: 10px 0 12px 24px;
-}
-.container{
-    display: flex;
+    padding: 10px 0;
 }
 .footer-down-text{
-    padding: 0;
+    padding-left: 24px;
     margin: 0;
     color: var(--color-dark);
 }
@@ -468,15 +466,3 @@ img{
     opacity: 1;
     transition: .3s ease-out;
 }
-
-
-
-
-
-
-
-
-
-
-
-
