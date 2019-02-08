@@ -1,4 +1,4 @@
-@import"var.css";
+@import"vars.css";
 @import"fonts.css";
 
 body{
@@ -38,7 +38,6 @@ img{
     letter-spacing: -0.025em;
     text-align: center;
     font-family: 'MontserratBold', sans-serif;
-    /* line-height: 75px; */
 }
 .text-under-healine {
     margin: 0 0 80px 0;
@@ -46,7 +45,6 @@ img{
     color: var(--color-grey);
     font-size: 16px;
     line-height: 1.2;
-    /* font-style: italic; */
     font-family: 'Droid_Serif_Italic', serif;
 }
 
@@ -223,12 +221,12 @@ img{
     font-size: 14px;
     color: var(--color-grey-light);
 }
-.contact-input:valid,
-.contact-textarea:valid{
+.contact-input:focus:valid,
+.contact-textarea:focus:valid{
     outline: 2px solid #008000;
 }
-.contact-input:invalid,
-.contact-textarea:invalid{
+.contact-input:focus:invalid,
+.contact-textarea:focus:invalid{
     outline: 2px solid #ff0000;
 }
 .contact-textarea{
@@ -241,6 +239,7 @@ img{
     box-sizing: border-box;
     color: var(--color-very-grey);
     font-family: 'MontserratBold', sans-serif;
+	resize: none;
 }
 .contact-button{
     color: #fff;
