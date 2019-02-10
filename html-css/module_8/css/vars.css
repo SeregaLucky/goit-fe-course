@@ -1,0 +1,10 @@
+:root{
+    --wpapper-mobile: 320px;
+    --wpapper-tablet: 748px;
+    --wpapper-desktop: 940px;
+
+    --color-white: #FFF;
+    --color-dark: #333333;
+    --color-light: #666666;
+    --color-red: #ff4e50;
+}

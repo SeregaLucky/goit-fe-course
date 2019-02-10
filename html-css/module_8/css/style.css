@@ -1,0 +1,141 @@
+@import"vars.css";
+@import"fonts.css";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.wrapper{
+    width: var(--wpapper-mobile);
+    margin: 0 auto;
+}
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+.headline{
+}
+
+
+
+
+
+/* !!!!!!--FIRST--!!!!!! */
+.first{
+    /* background-color: #1a1915; */
+    background-blend-mode: multiply;
+    background-image: url('../img/png/first.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0 0 0;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* !!!!!!--MEET--!!!!!! */
+.meet{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+.sprite-icon1 {
+    width: 16px;
+    height: 16px;
+    background-position: -5px -5px;
+}
+.sprite-icon2 {
+    width: 16px;
+    height: 17px;
+    background-position: -31px -5px;
+}
+.sprite-icon3 {
+    width: 13px;
+    height: 16px;
+    background-position: -57px -5px;
+}
+.sprite-icon4 {
+    width: 17px;
+    height: 16px;
+    background-position: -5px -32px;
+} */

@@ -5,6 +5,10 @@ body{
     margin: 0;
     padding: 0;
 }
+*{
+   margin: 0;
+   padding: 0;
+}
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden{
@@ -55,9 +59,7 @@ img{
 .header{
     padding: 38px 0 0 0;
     margin: 0 0 102px 0;
-}
-.container{
-    display: flex;
+	display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -75,12 +77,14 @@ img{
     display: flex;
     margin: 0;
     padding: 0;
-    width: 480px;
     justify-content: space-between;
 }
 .nav-item{
     list-style: none;
     text-transform: uppercase;
+}
+.nav-item:not(:last-child){
+	margin: 0 40px 0 0;
 }
 .nav-link{
     display: block;
@@ -106,15 +110,12 @@ img{
     color: var(--color-very-grey);
 }
 .services-list{
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: space-between;
 }
 .services-item{
     list-style: none;
     flex: 0 0 290px;
-    transition: .2s;
 }
 .services-for-round{
     display: block;
@@ -190,6 +191,10 @@ img{
     background-position: 100% 100%;
     background-repeat: no-repeat;
 }
+.container{
+	width: 1000px;
+    margin: 0 auto;
+}
 .contact-healine{
     color: #fff;
 }
@@ -230,7 +235,6 @@ img{
     outline: 2px solid #ff0000;
 }
 .contact-textarea{
-    width: 460px;
     flex: 0 0 460px;
     height: 214px;
     border-radius: 5px;
