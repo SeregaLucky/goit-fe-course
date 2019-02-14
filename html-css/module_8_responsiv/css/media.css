@@ -1,10 +1,10 @@
-@media screen and (max-width: 747px) {
+@media screen and (max-width: 74.7em) {
 /* !!!!!!--FIRST--!!!!!! */
     .first{
-        padding: 20px 0 140px 0;
+        padding: 2rem 0 14rem 0;
     }
     .header{
-        margin: 0 0 120px 0;
+        margin: 0 0 12rem 0;
     }
     .logo{
         display: none;
@@ -14,43 +14,44 @@
     }
     .logo-mobile{
         text-align: center;
-        font-size: 20px;
+        font-size: 2rem;
         letter-spacing: 0.05em;
-        margin: 0 0 40px 0;
+        margin: 0 0 4rem 0;
     }
     .first-headline{
-        font-size: 30px;
-        margin: 0 0 20px 0;
+        font-size: 3rem;
+        margin: 0 0 2rem 0;
     }
     .first-text{
-        font-size: 18px;
-        margin: 0 0 20px 0;
+        font-size: 1.8rem;
+        margin: 0 0 2rem 0;
     }
     .first-cent_link{
-        width: 280px;
+        width: 28rem;
     }
 
 
 /* !!!!!!--MEET--!!!!!! */
     .meet{
-        padding-bottom: 58px;
+        padding-bottom: 5.8rem;
     }
     .meet-headline{
-        margin: 0 0 20px 0;
+        margin: 0 0 2rem 0;
     }
     .meet-list{
-        margin: 0 0 28px 0;
-
-        /* даем что бы дать ордер */
+        margin: 0 0 2.8rem 0;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
     .meet-item{
-        width: 280px;
+        width: 100%;
+    }
+    .meet-item__figure{
+        width: 28rem;
         margin: 0 auto;
     }
     .meet-item:not(:last-child){
-        margin-bottom: 28px;
+        margin-bottom: 2.8rem;
     }
     /* Меняем ли одно местами */
     .meet-item:nth-child(1){
@@ -65,7 +66,7 @@
         order: 3;
     }
     .meet-more{
-        width: 280px;
+        width: 28rem;
     }
 }
 
@@ -73,65 +74,67 @@
 
 
 
-@media screen and (min-width: 748px) {
+@media screen and (min-width: 74.8em) {
 /* !!!!!!--FIRST--!!!!!! */
-    .container{
-        width: var(--wpapper-tablet);
-    }
     .first{
-        padding: 38px 0 234px 0;
+        padding: 3.8rem 0 23.4rem 0;
     }
     .header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 0 150px 0;
-        padding: 0 40px;
+        margin: 0 0 15rem 0;
+        padding: 0 4rem;
     }
     .logo{
         margin: 0;
     }
     .first-center{
-        width: 510px;
+        width: 51rem;
         margin: 0 auto;
     }
     .logo-mobile{
         display: none;
     }
     .first-headline{
-        font-size: 52px;
-        margin: 0 0 40px 0;
+        font-size: 5.2rem;
+        margin: 0 0 4rem 0;
     }
     .first-text{
-        font-size: 24px;
-        margin: 0 0 34px 0;
+        font-size: 2.4rem;
+        margin: 0 0 3.4rem 0;
     }
     .first-cent_link{
-        width: 226px;
+        width: 22.6rem;
     }
 
 
 /* !!!!!!--MEET--!!!!!! */
     .meet{
-        padding-bottom: 40px;
+        padding-bottom: 4rem;
     }
     .container{
     }
     .meet-headline{
-        margin: 0 0 34px 0;
+        margin: 0 0 3.4rem 0;
     }
     .meet-list{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
     .meet-item{
-        flex: 0 0 236px;
+        /* flex: 0 0 23.6rem; */
+        width: 50%;
+    }
+    .meet-item__figure{
+        width: 23.6rem;
+        margin: 0 auto;
     }
     .meet-headline3{
     }
     .meet-more{
-        width: 280px;
+        width: 28rem;
     }
 }
 
@@ -139,14 +142,14 @@
 
 
 
-@media screen and (min-width: 748px) and (max-width: 939px) {
+@media screen and (min-width: 74.8em) and (max-width: 93.9em) {
 /* !!!!!!--MEET--!!!!!! */
     .meet-list{
-        width: 492px;
-        margin: 0 auto 36px auto;
+        /* width: 49.2rem; */
+        /* margin: 0 auto 3.6rem auto; */
     }
     .meet-item:not(:nth-last-child(-n+2)){
-        margin: 0 0 56px 0;
+        margin: 0 0 5.6rem 0;
     }
 }
 
@@ -154,11 +157,8 @@
 
 
 
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 94em) {
 /* !!!!!!--FIRST--!!!!!! */
-    .container{
-        width: var(--wpapper-desktop);
-    }
     .header{
         padding: 0;
     }
@@ -166,9 +166,9 @@
 
 /* !!!!!!--MEET--!!!!!! */
     .meet-list{
-        margin: 0 0 36px 0;
+        margin: 0 0 3.6rem 0;
     }
     .meet-item{
-        flex: 0 0 220px;
+        flex: 0 0 22rem;
     }
 }
