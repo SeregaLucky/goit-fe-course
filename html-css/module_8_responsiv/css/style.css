@@ -1,13 +1,11 @@
 @import"fonts.css";
 @import"vars.css";
 
-/* html{
-    font-size: 62.5%;
-} */
+
 body{
     margin: 0;
     padding: 0;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
 }
 *{
     margin: 0;
@@ -36,7 +34,7 @@ img{
     display: block;
 }
 .container{
-    max-width: 94rem;
+    max-width: 107rem;
     margin: 0 auto;
 }
 a{
@@ -70,6 +68,11 @@ a{
 .first-inside{
     display: flex;
     font-family: 'MontserratBold', sans-serif;
+    font-size: 1.4rem;
+}
+.first-center{
+    /* width: 80%;
+    margin: 0 auto; */
 }
 .first-ins_link{
     display: inline-block;
@@ -100,6 +103,9 @@ a{
 .first-text{
     color: #fff;
     font-family: 'RobotoLight', sans-serif;
+    
+    /* width: 85%;
+    margin: 0 auto; */
 }
 .first-cent_link{
     color: #fff;
@@ -109,6 +115,7 @@ a{
     margin: 0 auto;
     border-radius: 2.2rem;
     font-family: 'MontserratBold', sans-serif;
+    font-size: 1.4rem;
 }
 
 
@@ -223,6 +230,7 @@ a{
     text-align: center;
     color: var(--color-light);
     font-family: 'RobotoLight', sans-serif;
+    font-size: 1.4rem;
 }
 .meet-more{
     color: var(--color-red);
@@ -234,4 +242,5 @@ a{
     margin: 0 auto;
     cursor: pointer;
     font-family: 'MontserratBold', sans-serif;
+    font-size: 1.4rem;
 }

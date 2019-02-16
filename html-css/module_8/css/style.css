@@ -201,6 +201,8 @@ a{
 .meet-img{
     border-radius: 50%;
     margin: 0 auto;
+	
+	height: 122px;
 }
 .meet-headline3{
     text-align: center;
