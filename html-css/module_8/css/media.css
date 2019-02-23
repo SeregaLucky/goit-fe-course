@@ -1,71 +1,6 @@
 @media screen and (max-width: 747px) {
-/* !!!!!!--FIRST--!!!!!! */
-    .first{
-        padding: 20px 0 140px 0;
-    }
-    .header{
-        margin: 0 0 120px 0;
-    }
-    .logo{
-        display: none;
-    }
-    .first-inside{
-        justify-content: center;
-    }
-    .logo-mobile{
-        text-align: center;
-        font-size: 20px;
-        letter-spacing: 0.05em;
-        margin: 0 0 40px 0;
-    }
-    .first-headline{
-        font-size: 30px;
-        margin: 0 0 20px 0;
-    }
-    .first-text{
-        font-size: 18px;
-        margin: 0 0 20px 0;
-    }
-    .first-cent_link{
-        width: 280px;
-    }
-
-
-/* !!!!!!--MEET--!!!!!! */
-    .meet{
-        padding-bottom: 58px;
-    }
-    .meet-headline{
-        margin: 0 0 20px 0;
-    }
-    .meet-list{
-        margin: 0 0 28px 0;
-
-        /* даем что бы дать ордер */
-        display: flex;
-        flex-direction: column;
-    }
-    .meet-item{
-        width: 280px;
-        margin: 0 auto;
-    }
     .meet-item:not(:last-child){
         margin-bottom: 28px;
-    }
-    /* Меняем ли одно местами */
-    .meet-item:nth-child(1){
-    }
-    .meet-item:nth-child(2){
-        order: 2;
-    }
-    .meet-item:nth-child(3){
-        order: 1;
-    }
-    .meet-item:nth-child(4){
-        order: 3;
-    }
-    .meet-more{
-        width: 280px;
     }
 }
 
@@ -79,17 +14,24 @@
         width: var(--wpapper-tablet);
     }
     .first{
-        padding: 38px 0 234px 0;
+        padding: 226px 0 234px 0;
     }
     .header{
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        /* margin: 0 0 150px 0; */
+        /* padding: 0 40px; */
+        top: 40px;
+    }
+    .for-container-flex{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 0 150px 0;
-        padding: 0 40px;
     }
     .logo{
         margin: 0;
+        display: block;
     }
     .first-center{
         width: 520px;
@@ -124,9 +66,23 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        flex-direction: row;
     }
     .meet-item{
         flex: 0 0 236px;
+        margin: 0;
+    }
+    /* Меняем ли одно местами */
+    .meet-item:nth-child(1){
+    }
+    .meet-item:nth-child(2){
+        order: 0;
+    }
+    .meet-item:nth-child(3){
+        order: 0;
+    }
+    .meet-item:nth-child(4){
+        order: 0;
     }
     .meet-headline3{
     }
@@ -146,7 +102,7 @@
         margin: 0 auto 36px auto;
     }
     .meet-item:not(:nth-last-child(-n+2)){
-        margin: 0 0 56px 0;
+        margin-bottom: 56px;
     }
 }
 

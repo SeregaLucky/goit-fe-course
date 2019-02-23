@@ -9,6 +9,7 @@ body{
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -54,15 +55,25 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 176px 0 140px 0;
+}
+.header{
+    /* margin: 0 0 120px 0; */
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .logo{
     font-size: 20px;
     letter-spacing: 0.05em;
     font-family: 'MontserratBold', sans-serif;
+    display: none;
 }
 .first-inside{
     display: flex;
     font-family: 'MontserratBold', sans-serif;
+    justify-content: center;
 }
 .first-ins_link{
     display: inline-block;
@@ -77,6 +88,12 @@ a{
 .first-ins_link:not(:last-child){
     margin: 0 4px 0 0;
 }
+.logo-mobile{
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    margin: 0 0 40px 0;
+}
 .first-headline,
 .first-text,
 .first-cent_link{
@@ -86,6 +103,8 @@ a{
     color: #fff;
     text-transform: uppercase;
     font-family: 'MontserratBold', sans-serif;
+    font-size: 30px;
+    margin: 0 0 20px 0;
 }
 .first-cent_link{
     display: block;
@@ -93,16 +112,18 @@ a{
 .first-text{
     color: #fff;
     font-family: 'RobotoLight', sans-serif;
+    font-size: 18px;
+    margin: 0 0 20px 0;
 }
 .first-cent_link{
     color: #fff;
     display: block;
     background: var(--color-red);
-    /* min-height: 40px; */
     padding: 14px 0;
     margin: 0 auto;
     border-radius: 22px;
     font-family: 'MontserratBold', sans-serif;
+    width: 280px;
 }
 
 
@@ -112,15 +133,44 @@ a{
 /* !!!!!!--MEET--!!!!!! */
 .meet{
     padding-top: 70px;
+    padding-bottom: 58px;
 }
 .meet-headline{
     font-size: 22px;
     color: var(--color-dark);
     text-align: center;
     font-family: 'MontserratBold', sans-serif;
+    margin: 0 0 20px 0;
+}
+.meet-list{
+    margin: 0 0 28px 0;
+
+    /* даем что бы дать ордер */
+    display: flex;
+    flex-direction: column;
 }
 .meet-item{
     list-style: none;
+    width: 280px;
+    margin: 0 auto;
+}
+/* .meet-item:not(:last-child){
+    margin-bottom: 28px;
+} */
+/* Меняем ли одно местами */
+.meet-item:nth-child(1){
+}
+.meet-item:nth-child(2){
+    order: 2;
+}
+.meet-item:nth-child(3){
+    order: 1;
+}
+.meet-item:nth-child(4){
+    order: 3;
+}
+.meet-more{
+    width: 280px;
 }
 .meet-photo{
     margin: 0 0 20px 0;
