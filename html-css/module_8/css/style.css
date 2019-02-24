@@ -93,6 +93,7 @@ a{
     font-size: 20px;
     letter-spacing: 0.05em;
     margin: 0 0 40px 0;
+    font-family: 'MontserratBold', sans-serif;
 }
 .first-headline,
 .first-text,
@@ -106,9 +107,6 @@ a{
     font-size: 30px;
     margin: 0 0 20px 0;
 }
-.first-cent_link{
-    display: block;
-}
 .first-text{
     color: #fff;
     font-family: 'RobotoLight', sans-serif;
@@ -116,6 +114,7 @@ a{
     margin: 0 0 20px 0;
 }
 .first-cent_link{
+    display: block;
     color: #fff;
     display: block;
     background: var(--color-red);

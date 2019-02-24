@@ -1,0 +1,65 @@
+@media screen and (max-width: 747px) {    
+    .header-inside{
+        width: 100%;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 748px) {
+/* !!!!!!--HEADER--!!!!!! */
+    .header{
+        top: 40px;
+    }
+    .logo{
+        margin: 0;
+        display: block;
+    }
+
+/* !!!!!!--FIRST--!!!!!! */
+    .first{
+        padding: 226px 0 234px 0;
+    }
+    .logo-mobile{
+        display: none;
+    }
+    .first-headline{
+        font-size: 52px;
+        margin: 0 0 40px 0;
+    }
+    .first-text{
+        font-size: 24px;
+        margin: 0 0 34px 0;
+    }
+    .first-cent_link{
+        width: 226px;
+    }
+
+
+/* !!!!!!--MEET--!!!!!! */
+    
+}
+
+
+
+
+
+@media screen and (min-width: 748px) and (max-width: 939px) {
+/* !!!!!!--MEET--!!!!!! */
+    
+}
+
+
+
+
+
+@media screen and (min-width: 940px) {
+/* !!!!!!--FIRST--!!!!!! */
+    
+
+
+/* !!!!!!--MEET--!!!!!! */
+    
+}
