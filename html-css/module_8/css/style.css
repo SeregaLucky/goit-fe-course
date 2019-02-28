@@ -176,82 +176,55 @@ a{
 
     position: relative;
 }
-.meet-for-img{
-    position: absolute;
-    top: 66%;
-    left: 59%;
-    width: 37px;
-    height: 37px;
-    border: 4px solid #fff;
-    border-radius: 50%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bg1::before{
+    background-color: var(--color-red);
 }
-
-/* .meet-item:nth-child(1) .meet-for-img{
-    background: var(--color-red);
-}
-.meet-item:nth-child(2) .meet-for-img{
+.bg2::before{
     background: #1cd7ad;
 }
-.meet-item:nth-child(3) .meet-for-img{
+.bg3::before{
     background: #ffa507;
 }
-.meet-item:nth-child(4) .meet-for-img{
-    background: #4e73db;
-} */
-.bg1{
-    background: var(--color-red);
-}
-.bg2{
-    background: #1cd7ad;
-}
-.bg3{
-    background: #ffa507;
-}
-.bg4{
+.bg4::before{
     background: #4e73db;
 }
-
-.meet-for-img::after{
+.meet-photo::before{
     content: '';
-    background-image: url(../img/png/spritesheet.png);
+    background-image: url(../img/png/spritesheet2.png);
     background-repeat: no-repeat;
     display: block;
+    position: absolute;
+    top: 67%;
+    left: 60%;
+    width: 37px;
+    height: 37px;
+    /* border: 4px solid #fff; */
+    box-shadow: 0 0 0 4px #fff;
+    border-radius: 50%;
 }
+
 /* Sprit.Start--> */
-.sprite-icon1::after {
-    content: '';
-    width: 16px;
-    height: 16px;
-    background-position: -5px -5px;
+.sprite-icon1::before {
+    background-position: -39px -41px;
 }
-.sprite-icon2::after {
-    content: '';
-    width: 16px;
-    height: 17px;
-    background-position: -31px -5px;
+
+.sprite-icon2::before {
+    background-position: -155px -41px;
 }
-.sprite-icon3::after {
-    content: '';
-    width: 13px;
-    height: 16px;
-    background-position: -57px -5px;
+
+.sprite-icon3::before {
+    background-position: -270px -39px;
 }
-.sprite-icon4::after {
-    content: '';
-    width: 17px;
-    height: 16px;
-    background-position: -5px -32px;
+
+.sprite-icon4::before {
+    background-position: -41px -155px;
 }
 /* Sprit.Finish */
 .meet-img{
     border-radius: 50%;
     margin: 0 auto;
-	
-	height: 122px;
+
+    height: 122px;
 }
 .meet-headline3{
     text-align: center;
