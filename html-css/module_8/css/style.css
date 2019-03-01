@@ -168,9 +168,9 @@ a{
 .meet-item:nth-child(4){
     order: 3;
 }
-.meet-more{
-    width: 280px;
-}
+/* .meet-more{ */
+    /* width: 280px; */
+/* } */
 .meet-photo{
     margin: 0 0 20px 0;
 
@@ -248,4 +248,5 @@ a{
     margin: 0 auto;
     cursor: pointer;
     font-family: 'MontserratBold', sans-serif;
+    width: 280px;
 }
