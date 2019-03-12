@@ -1,0 +1,10 @@
+@mixin for-text($size, $height) {
+    font-size:  $size;
+    line-height: $height;
+}
+@mixin all-bg($from-where: '', $repeat: no-repeat, $bg-size: cover, $position: center) {
+    background-image: url($from-where);
+    background-repeat: $repeat;
+    background-size: $bg-size;
+    background-position: $position;
+}
