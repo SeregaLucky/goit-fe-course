@@ -1,0 +1,19 @@
+.team{
+    padding: 90px 0 80px 0;
+ 
+    &__text{
+       text-align: center;
+       line-height: 24px;
+       width: 980px;
+       margin: 0 auto 80px auto;
+       font-family: $RobotoRegular;
+    }
+    &__list{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+    }
+    &__item{
+       width: 380px;
+    }
+ }

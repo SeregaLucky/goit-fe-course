@@ -2,11 +2,41 @@
    Import partials below
 */
 
+
+
 // Utils
 @import 'normalize';
-@import 'vars';
-@import 'placeholders';
-@import 'mixins';
-
-//Base styles
+@import 'helpers/vars';
+@import 'helpers/placeholders';
+@import 'helpers/mixins';
+@import 'base';
+@import 'helpers/extras';
 @import 'fonts';
+
+
+
+// Components
+@import 'components/container';
+
+   // Components - header
+@import 'components/header';
+@import 'components/logo';
+@import 'components/site-navigation';
+@import 'components/cont-touch-svg';
+
+   // Components - section: face
+@import 'components/face';
+
+   // Components - section: servises
+@import 'components/services';
+@import 'components/cont-services';
+
+   // Components - section: team
+@import 'components/team';
+@import 'components/item-team';
+@import 'components/social-list';
+@import 'components/figcaption-team';
+
+   // Components - footer
+@import 'components/footer';
+@import 'components/form';

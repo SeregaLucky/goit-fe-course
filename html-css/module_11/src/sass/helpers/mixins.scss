@@ -1,0 +1,38 @@
+// @mixin for-text($size, $height) {
+//     font-size:  $size;
+//     line-height: $height;
+// }
+// @mixin all-bg($from-where: '', $repeat: no-repeat, $bg-size: cover, $position: center) {
+//     background-image: url($from-where);
+//     background-repeat: $repeat;
+//     background-size: $bg-size;
+//     background-position: $position;
+// }
+// @mixin center-flex($type: 'all') {
+//     display: flex;
+  
+//     @if $type == 'all' {
+//       justify-content: center;
+//       align-items: center;
+//     } @else if $type== 'hor' {
+//       justify-content: center;
+//     } @else if $type== 'ver' {
+//       align-items: center;
+//     }
+//   }
+//   @mixin generate-pseudo-icons($baseclass, $list, $path, $ext) {
+//     @each $icon in $list {
+//       .#{$baseclass}#{$icon}::before {
+//         background-image: url(#{$path}#{$icon}.#{$ext});
+  
+//         @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+//           background-image: url(#{$path}#{$icon}@2px.#{$ext});
+//         }
+//       }
+//     }
+//   }
+
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}

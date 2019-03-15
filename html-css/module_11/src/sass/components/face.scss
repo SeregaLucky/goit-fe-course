@@ -1,0 +1,32 @@
+.face{
+    background: linear-gradient(0deg, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9)),
+                url('../images/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 230px 0;
+ 
+    @media (min-resolution: 192dpi), (min-resolution: 192dppx){
+       background: url('../images/bg@2x.jpg');
+    }
+ 
+    &__title{
+       text-align: center;
+       color: map-get($color, for-white);
+       width: 820px;
+       margin: 0 auto 120px auto;
+    }
+    &__title-up{
+       font-size: 72px;
+    }
+    &__title-down{
+       font-size: 140px;
+    }
+    &__button{
+       display: block;
+       margin: 0 auto;
+       border: 3px solid map-get($color, for-white);
+       background: transparent;
+       padding: 12px 30px;
+    }
+ }

@@ -1,0 +1,42 @@
+.services{
+    padding: 40px 0 0 0;
+ 
+    &__list{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+    }
+ }
+ .services__item{
+    display: flex;
+    flex: 0 0 380px;
+    padding: 0 0 0 24px;
+ 
+    &:not(:nth-last-child(-n+3)){
+       margin: 0 0 100px 0;
+    }
+ }
+ .services__svg{
+    fill: map-get($color, lig-green);
+    flex-shrink: 0;
+    margin: 0 24px 0 0;
+ 
+    &--icon-alarm{
+       @include width-height(32px, 31px);
+    }
+    &--icon-line{
+       @include width-height(32px, 32px);
+    }
+    &--icon-computer{
+       @include width-height(32px, 28px);
+    }
+    &--icon-book{
+       @include width-height(32px, 32px);
+    }
+    &--icon-home{
+       @include width-height(32px, 31px);
+    }
+    &--icon-image{
+       @include width-height(32px, 32px);
+    }
+ }
