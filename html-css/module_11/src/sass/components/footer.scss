@@ -8,11 +8,34 @@
        border-top: 1px solid #e7e7e7;
     }
     &__text{
-       font-family: $MontserratRegular;
+       font-family: $secondText;
        color: map-get($color, dark-gray);
     }
     &__text-link{
        color: map-get($color, good-red);
        text-decoration: none;
+    }
+ }
+ .form{
+    font-size: 0;
+ 
+    &__button{
+       font-size: 14px;
+       @include width-height(150px, 40px);
+       border: none;
+       background: map-get($color, lig-green);
+    }
+ }
+ .form__input-email{
+    font-size: 14px;
+    @include width-height(230px, 40px);
+    border: 1px solid #e7e7e7;
+    border-right: none;
+    padding: 0 0 0 12px;
+    color: map-get($color, main-gray);
+    font-family: $forTeamName;
+ 
+    &--placeholder::placeholder{
+       color: map-get($color, light-gray);
     }
  }

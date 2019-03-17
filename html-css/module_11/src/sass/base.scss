@@ -40,7 +40,7 @@ a{
  
  .title-up{
     text-transform: capitalize;
-    font-family: $KaushanScript;
+    font-family: $forTitleUp;
     font-weight: 400;
     display: block;
 
@@ -52,7 +52,7 @@ a{
  }
  .title-down{
     text-transform: uppercase;
-    font-family: $MontserratBold;
+    font-family: $forTitleDown;
     display: block;
 
     &__section{
