@@ -15,21 +15,21 @@ if (askPassword === null) {
 
 alert(message);
 
-// // ----- 2 ЗАДАЧА -----
-// let credits = 23580;
-// const pricePerDroid = 3000;
-// const quantity = 1;
+// ----- 2 ЗАДАЧА -----
+let credits = 23580;
+const pricePerDroid = 3000;
+const quantity = 6;
 
-// let total = pricePerDroid * quantity;
-// let totalPrice = credits - total;
+let total = pricePerDroid * quantity;
+let totalPrice = credits - total;
 
-// if (credits < total) {
-//   console.log("Недостаточно средств на счету!");
-// } else {
-//   console.log(
-//     `Вы купили ${quantity} дроидов, на счету осталось ${totalPrice} кредитов.`
-//   );
-// }
+if (credits < total) {
+  console.log("Недостаточно средств на счету!");
+} else {
+  console.log(
+    `Вы купили ${quantity} дроидов, на счету осталось ${totalPrice} кредитов.`
+  );
+}
 
 // // ----- 2 ЗАДАЧА(через тернарный оператор) -----
 // let credits = 23580;
@@ -39,31 +39,31 @@ alert(message);
 // let totalPrice = credits - total;
 // credits < total ? console.log('Недостаточно средств на счету!') : console.log(`Вы купили ${quantity} дроидов, на счету осталось ${totalPrice} кредитов.`);
 
-// // ----- 3 ЗАДАЧА -----
-// const country = "Китай";
-// let price;
-// switch (country) {
-//   case "Китай":
-//     price = "100 кредитов";
-//     console.log(`Доставка в ${country} будет стоить ${price}`);
-//     break;
-//   case "Южная Америка":
-//     price = "250 кредитов";
-//     console.log(`Доставка в ${country} будет стоить ${price}`);
-//     break;
-//   case "Австралия":
-//     price = "170 кредитов";
-//     console.log(`Доставка в ${country} будет стоить ${price}`);
-//     break;
-//   case "Индия":
-//     price = "80 кредитов";
-//     console.log(`Доставка в ${country} будет стоить ${price}`);
-//     break;
-//   case "Ямайка":
-//     price = "120 кредитов";
-//     console.log(`Доставка в ${country} будет стоить ${price}`);
-//     break;
+// ----- 3 ЗАДАЧА -----
+const country = "Китай";
+let price;
+switch (country) {
+  case "Китай":
+    price = "100 кредитов";
+    console.log(`Доставка в ${country} будет стоить ${price}`);
+    break;
+  case "Южная Америка":
+    price = "250 кредитов";
+    console.log(`Доставка в ${country} будет стоить ${price}`);
+    break;
+  case "Австралия":
+    price = "170 кредитов";
+    console.log(`Доставка в ${country} будет стоить ${price}`);
+    break;
+  case "Индия":
+    price = "80 кредитов";
+    console.log(`Доставка в ${country} будет стоить ${price}`);
+    break;
+  case "Ямайка":
+    price = "120 кредитов";
+    console.log(`Доставка в ${country} будет стоить ${price}`);
+    break;
 
-//   default:
-//     console.log("В вашей стране доставка не доступна");
-// }
+  default:
+    console.log("В вашей стране доставка не доступна");
+}

@@ -91,4 +91,62 @@
 
 //
 // --4--
+// const getPx = str => {
+//   let hhh;
+//   hhh = str !== Number(str);
 
+//   console.log(hhh);
+
+//   if (hhh) {
+//     return parseFloat(str);
+//   } else {
+//     return null;
+//   }
+// };
+// console.log(getPx("10px")); // true
+// console.log(getPx("10.5")); // true
+// console.log(getPx("0")); // true
+// console.log(getPx(-1)); // null
+// console.log(getPx(10)); // null
+//
+
+//
+// --5--
+// const findLongestWord = str => {
+//   const strList = str.split(" ");
+//   console.log(strList);
+
+//   let item;
+//   let word;
+//   let eee = 0;
+
+//   for (item of strList) {
+//     // let eee = 0;
+//     // let word;
+
+//     if (item.length > eee) {
+//       eee = item.length;
+//       word = item;
+//     }
+//   }
+//   return word;
+// };
+
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); // 'jumped'
+// console.log(findLongestWord("Google do a roll")); // 'Google'
+// console.log(findLongestWord("May the force be with you")); // 'force'
+//
+
+//
+// --6--
+const findLargestNumber = numbers => {
+  for (let i = 0; i < numbers.length; i++) {
+    let number = numbers[i];
+    console.log(number);
+
+    if () {
+      s
+    }
+  }
+};
+findLargestNumber([1, 2, 3]);
