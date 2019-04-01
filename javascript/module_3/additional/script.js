@@ -139,14 +139,71 @@
 
 //
 // --6--
-const findLargestNumber = numbers => {
-  for (let i = 0; i < numbers.length; i++) {
-    let number = numbers[i];
-    console.log(number);
+// const findLargestNumber = numbers => {
+//   let num = 0;
 
-    if () {
-      s
-    }
-  }
-};
-findLargestNumber([1, 2, 3]);
+//   for (let i = 0; i < numbers.length; i++) {
+//     let number = numbers[i];
+
+//     if (number > num) {
+//       num = number;
+//     }
+//   }
+//   return num;
+// };
+// console.log(findLargestNumber([1, 2, 3])); // 3
+// console.log(findLargestNumber([27, 12, 18, 5])); // 27
+// console.log(findLargestNumber([31, 128, 14, 74])); // 128
+//
+
+//
+// --7--
+// const uniqueNumbers = [2, 1, 4, 9];
+
+// const addUniqueNumbers = (...args) => {
+//   let nnn;
+
+//   for (const element of args) {
+//     nnn = uniqueNumbers.includes(element);
+//     console.log(nnn);
+
+//     if (nnn) {
+//       continue;
+//     } else {
+//       uniqueNumbers.push(element);
+//     }
+//   }
+// };
+// addUniqueNumbers(1, 2, 3);
+// console.log(uniqueNumbers); // [2, 1, 4, 9, 3]
+
+// addUniqueNumbers(12, 2, 3, 19);
+// console.log(uniqueNumbers); // [2, 1, 4, 9, 3, 12, 19]
+
+// addUniqueNumbers(4, 5, 12, 3, 1, 2, 8);
+// console.log(uniqueNumbers); // [2, 1, 4, 9, 3, 12, 19, 5, 8]
+//
+
+//
+// --8--
+// const filterFromArray = function(arr) {
+//   const newArrey = arr;
+//   // console.log(newArrey);
+//   for (let element of arguments) {
+//     // console.log(element);
+
+//     let findIndexNum = arr.indexOf(element);
+//     // console.log(findIndexNum);
+
+//     if (findIndexNum === -1) {
+//       continue;
+//     } else {
+//       newArrey.splice(findIndexNum, 1);
+//     }
+//   }
+
+//   return newArrey;
+// };
+// console.log(filterFromArray([1, 2, 3, 4, 5], 2, 4)); // [1, 3, 5]
+// console.log(filterFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)); // [12, 8, 17]
+
