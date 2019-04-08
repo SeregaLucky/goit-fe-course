@@ -11,12 +11,12 @@ const isLoginValid = function(login) {
 
 // Проверяет что бы новый логин был с уникальным названием
 const isLoginUnique = function(allLogins, login) {
-  const loginLower = login.toLowerCase();
+  const makeLoginLower = login.toLowerCase();
 
   const akeLoginsSting = allLogins.join(" ");
-  const loginsLowerAll = akeLoginsSting.toLowerCase();
+  const makeLoginsLowerAll = akeLoginsSting.toLowerCase();
 
-  const isLogRepeat = loginsLowerAll.includes(loginLower);
+  const isLogRepeat = makeLoginsLowerAll.includes(makeLoginLower);
   const isLogUnique = !isLogRepeat;
 
   return isLogUnique;
