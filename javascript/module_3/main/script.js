@@ -13,8 +13,8 @@ const isLoginValid = function(login) {
 const isLoginUnique = function(allLogins, login) {
   const makeLoginLower = login.toLowerCase();
 
-  const akeLoginsSting = allLogins.join(" ");
-  const makeLoginsLowerAll = akeLoginsSting.toLowerCase();
+  const allLoginsSting = allLogins.join(", ");
+  const makeLoginsLowerAll = allLoginsSting.toLowerCase();
 
   const isLogRepeat = makeLoginsLowerAll.includes(makeLoginLower);
   const isLogUnique = !isLogRepeat;
