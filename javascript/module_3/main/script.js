@@ -6,17 +6,13 @@ const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 // Проверяет что бы новый логин отвечал требованиям по количеству символов
 const isLoginValid = function(login) {
   const isLoginGoodLength = login.length >= 4 && login.length <= 16;
+
   return isLoginGoodLength;
 };
 
 // Проверяет что бы новый логин был с уникальным названием
 const isLoginUnique = function(allLogins, login) {
-  const makeLoginLower = login.toLowerCase();
-
-  const allLoginsSting = allLogins.join(", ");
-  const makeLoginsLowerAll = allLoginsSting.toLowerCase();
-
-  const isLogRepeat = makeLoginsLowerAll.includes(makeLoginLower);
+  const isLogRepeat = allLogins.includes(login);
   const isLogUnique = !isLogRepeat;
 
   return isLogUnique;
@@ -46,6 +42,4 @@ addLogin(logins, "robotGoogles"); // 'Такой логин уже исполь�
 addLogin(logins, "Zod"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 addLogin(logins, "jqueryisextremelyfast"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 
-// console.log(isLoginValid("Ajax"));
-// console.log(isLoginUnique(logins, "Ajax"));
 console.log(logins);

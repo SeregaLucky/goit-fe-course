@@ -109,5 +109,71 @@
 //
 
 //
-// --4--
+// --3.1--
+// const User = function({ name, age, friends }) {
+//   this.name = name;
+//   this.age = age;
+//   this.friends = friends;
+//   this.getInfo = function() {
+//     console.log(
+//       `User ${this.name} is ${this.age} years old and has ${
+//         this.friends
+//       } friends`
+//     );
+//   };
+// };
 
+// const mango = new User({ name: "Mango", age: 2, friends: 20 });
+// mango.getInfo(); // User Mango is 2 years old and has 20 friends
+
+// const poly = new User({ name: "Poly", age: 3, friends: 17 });
+// poly.getInfo(); // User Poly is 3 years old and has 17 friends
+//
+//
+
+//
+// --4--
+const Storage = function(items) {
+  this.items = items;
+  // console.log(items);
+
+  this.getItems = function() {
+    return this.items;
+  };
+
+  this.addItem = function(item) {
+    this.items.push(item);
+  };
+
+  this.removeItem = function(item) {
+    for (let i = 0; i < this.items.length; i += 1) {
+      console.log(this.items[i]);
+
+      const isFindItem = this.items[i] === item;
+      if (isFindItem) {
+        console.log(11111);
+
+        this.items.splice(i, 1);
+        break;
+      }
+
+      console.log(33333); //  проверяю остановился ли цикл после найденого элимента с помощью break
+    }
+  };
+};
+
+const storage = new Storage([
+  "Нанитоиды",
+  "Пролонгер",
+  "Железные жупи",
+  "Антигравитатор"
+]);
+
+const items = storage.getItems();
+console.log(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+
+storage.addItem("Дроид");
+console.log(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+
+storage.removeItem("Пролонгер");
+console.log(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]

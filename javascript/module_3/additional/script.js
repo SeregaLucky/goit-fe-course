@@ -121,9 +121,6 @@
 //   let eee = 0;
 
 //   for (item of strList) {
-//     // let eee = 0;
-//     // let word;
-
 //     if (item.length > eee) {
 //       eee = item.length;
 //       word = item;
@@ -135,7 +132,6 @@
 // console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); // 'jumped'
 // console.log(findLongestWord("Google do a roll")); // 'Google'
 // console.log(findLongestWord("May the force be with you")); // 'force'
-//
 
 //
 // --6--
@@ -161,13 +157,13 @@
 // const uniqueNumbers = [2, 1, 4, 9];
 
 // const addUniqueNumbers = (...args) => {
-//   let nnn;
+//   let isFind;
 
 //   for (const element of args) {
-//     nnn = uniqueNumbers.includes(element);
-//     console.log(nnn);
+//     isFind = uniqueNumbers.includes(element);
+//     console.log(isFind);
 
-//     if (nnn) {
+//     if (isFind) {
 //       continue;
 //     } else {
 //       uniqueNumbers.push(element);
