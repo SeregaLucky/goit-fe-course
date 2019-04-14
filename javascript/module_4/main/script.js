@@ -46,8 +46,6 @@ const notepad = {
      * Возвращает: сохраненную заметку
      */
 
-    // console.log(note);
-
     this.notes.push(note);
   },
   deleteNote(id) {
@@ -58,12 +56,12 @@ const notepad = {
      * Возвращает: ничего
      */
 
-    const delFoId = this.findNoteById(id);
+    const findFoId = this.findNoteById(id);
 
     for (let i = 0; i < this.notes.length; i += 1) {
-      console.log(this.notes[i]);
+      // console.log(this.notes[i]);
 
-      if (this.notes[i] === delFoId) {
+      if (this.notes[i] === findFoId) {
         this.notes.splice(i, 1);
       }
     }
@@ -83,20 +81,47 @@ const notepad = {
     const findFoId = this.findNoteById(id);
     // console.log(findFoId);
 
-    for (const key in findFoId) {
-      // console.log(key);
+    const keysFindFoId = Object.keys(findFoId);
+    // console.log(kkk);
 
-      for (const k in updatedContent) {
-        // console.log(k);
+    const keysUpdatedContent = Object.keys(updatedContent);
+    // console.log(kkk2);
 
-        // обновляем заметки
+    // const vvv = Object.values(findFoId);
+    // console.log(vvv);
+
+    // for (const key of kkk) {
+    //   console.log(key);
+    //   for (const k of kkk2) {
+    //     console.log(k);
+    //   }
+    // }
+
+    for (const k of keysUpdatedContent) {
+      // console.log(k);
+      for (const key of keysFindFoId) {
+        // console.log(key);
         if (k === key) {
-          // console.log(findFoId[key]);
-          // console.log(updatedContent[k]);
           findFoId[key] = updatedContent[k];
+          // console.log(11111111111);
         }
       }
     }
+
+    // for (const key in findFoId) {
+    //   // console.log(key);
+
+    //   for (const k in updatedContent) {
+    //     // console.log(k);
+
+    //     // обновляем заметки
+    //     if (k === key) {
+    //       // console.log(findFoId[key]);
+    //       // console.log(updatedContent[k]);
+    //       findFoId[key] = updatedContent[k];
+    //     }
+    //   }
+    // }
   },
   updateNotePriority(id, priority) {
     /*
@@ -139,10 +164,10 @@ const notepad = {
           // console.log(doLowerWord);
 
           const doArrayFoValue = doLowerWord.split(" ");
-          console.log(doArrayFoValue);
+          // console.log(doArrayFoValue);
 
           let isFindNeedNote = doArrayFoValue.includes(query);
-          console.log(isFindNeedNote);
+          // console.log(isFindNeedNote);
 
           if (isFindNeedNote) {
             arrayYouNeed.push(keyNotes);
@@ -157,10 +182,10 @@ const notepad = {
           // console.log(doLowerWord);
 
           const doArrayFoValue = doLowerWord.split(" ");
-          console.log(doArrayFoValue);
+          // console.log(doArrayFoValue);
 
           let isFindNeedNote = doArrayFoValue.includes(query);
-          console.log(isFindNeedNote);
+          // console.log(isFindNeedNote);
 
           if (isFindNeedNote) {
             arrayYouNeed.push(keyNotes);
@@ -184,13 +209,13 @@ const notepad = {
     const arrayYouFind = [];
 
     for (const keyNotes of this.notes) {
-      console.log(keyNotes);
+      // console.log(keyNotes);
 
       const isFindNeedPriority = keyNotes.priority;
-      console.log(isFindNeedPriority);
+      // console.log(isFindNeedPriority);
 
-      if (keyNotes.priority === priority) {
-        console.log(122);
+      if (isFindNeedPriority === priority) {
+        // console.log(122);
 
         arrayYouFind.push(keyNotes);
       }
@@ -237,22 +262,6 @@ notepad.saveNote({
 
 console.log("Все текущие заметки: ", notepad.getNotes());
 
-//
-//
-//
-//
-// Показывает мосив с заметками(обьекты)
-// console.log(notepad.notes);
-
-// console.log(notepad);
-
-// Находит заметку с нужным id
-// console.log(notepad.findNoteById("id-3"));
-//
-//
-//
-//
-
 /*
  * Зима уже близко, пора поднять приоритет на покупку одежды
  */
@@ -266,51 +275,51 @@ console.log(
 /*
  * Решил что фреймворки отложу немного, понижаю приоритет
  */
-// notepad.updateNotePriority("id-3", Priority.LOW);
+notepad.updateNotePriority("id-3", Priority.LOW);
 
-// console.log(
-//   "Заметки после обновления приоритета для id-3: ",
-//   notepad.getNotes()
-// );
+console.log(
+  "Заметки после обновления приоритета для id-3: ",
+  notepad.getNotes()
+);
 
 /*
  * Решил отфильтровать заметки по слову html
  */
-// console.log(
-//   'Отфильтровали заметки по ключевому слову "html": ',
-//   notepad.filterNotesByQuery("html")
-// );
+console.log(
+  'Отфильтровали заметки по ключевому слову "html": ',
+  notepad.filterNotesByQuery("html")
+);
 
 /*
  * Решил отфильтровать заметки по слову javascript
  */
-// console.log(
-//   'Отфильтровали заметки по ключевому слову "javascript": ',
-//   notepad.filterNotesByQuery("javascript")
-// );
+console.log(
+  'Отфильтровали заметки по ключевому слову "javascript": ',
+  notepad.filterNotesByQuery("javascript")
+);
 
 /*
  * Хочу посмотреть только заметки с нормальным приоритетом
  */
-// console.log(
-//   "Отфильтровали заметки по нормальному приоритету: ",
-//   notepad.filterNotesByPriority(Priority.NORMAL)
-// );
+console.log(
+  "Отфильтровали заметки по нормальному приоритету: ",
+  notepad.filterNotesByPriority(Priority.NORMAL)
+);
 
 /*
  * Обновим контент заметки с id-3
  */
-// notepad.updateNoteContent("id-3", {
-//   title: "Get comfy with React.js or Vue.js"
-// });
+notepad.updateNoteContent("id-3", {
+  title: "Get comfy with React.js or Vue.js"
+});
 
-// console.log(
-//   "Заметки после обновления контента заметки с id-3: ",
-//   notepad.getNotes()
-// );
+console.log(
+  "Заметки после обновления контента заметки с id-3: ",
+  notepad.getNotes()
+);
 
 /*
  * Повторил HTML и CSS, удаляю запись c id-2
  */
-// notepad.deleteNote("id-2");
-// console.log("Заметки после удаления с id -2: ", notepad.getNotes());
+notepad.deleteNote("id-2");
+console.log("Заметки после удаления с id -2: ", notepad.getNotes());
