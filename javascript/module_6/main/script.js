@@ -11,8 +11,20 @@ class Notepad {
    * Добавь статическое свойство Priority используя ключевое слово static
    */
 
-  constructor(note) {
-    this.notes = [note];
+  constructor(initialNotes) {
+    this.notes = initialNotes;
+  }
+
+  static Priority() {
+    // return
+    // return (Priority = {
+    //   LOW: 0,
+    //   NORMAL: 1,
+    //   HIGH: 2
+    // });
+    // LOW = 0;
+    // NORMAL = 1;
+    // HIGH = 2;
   }
 
   // getNotes() {
@@ -45,7 +57,7 @@ class Notepad {
     const delFoId = this.findNoteById(id);
 
     for (let i = 0; i < this.notes.length; i += 1) {
-      console.log(this.notes[i]);
+      // console.log(this.notes[i]);
 
       if (this.notes[i] === delFoId) {
         this.notes.splice(i, 1);
@@ -135,6 +147,7 @@ const initialNotes = [
 ];
 
 const notepad = new Notepad(initialNotes);
+console.log(notepad);
 
 /*
   Смотрю что у меня в заметках после инициализации

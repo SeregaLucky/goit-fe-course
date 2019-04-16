@@ -8,15 +8,19 @@ const Priority = {
 
 const notepad = {
   notes: [],
+
   getNotes() {
     /*
      * Принимает: ничего
      * Возвращает: все заметки, значение свойства notes
      */
 
-    const allNotes = this.notes;
-    return allNotes;
+    // const allNotes = this.notes;
+    // return allNotes;
+
+    return this.notes;
   },
+
   findNoteById(id) {
     /*
      * Ищет заметку в массиве notes
@@ -26,18 +30,25 @@ const notepad = {
      */
 
     for (const elNote of this.notes) {
-      // console.log(elNote);
-      const value = Object.values(elNote);
-
-      for (const idElem of value) {
-        // console.log(idElem);
-
-        if (idElem === id) {
-          return elNote;
-        }
+      if (elNote.id === id) {
+        return elNote;
       }
     }
+
+    // for (const elNote of this.notes) {
+    //   console.log(elNote);
+    //   const value = Object.values(elNote);
+
+    //   for (const idElem of value) {
+    //     // console.log(idElem);
+
+    //     if (idElem === id) {
+    //       return elNote;
+    //     }
+    //   }
+    // }
   },
+
   saveNote(note) {
     /*
      * Сохраняет заметку в массив notes
@@ -47,7 +58,9 @@ const notepad = {
      */
 
     this.notes.push(note);
+    return note;
   },
+
   deleteNote(id) {
     /*
      * Удаляет заметку по идентификатору из массива notes
@@ -66,6 +79,7 @@ const notepad = {
       }
     }
   },
+
   updateNoteContent(id, updatedContent) {
     /*
      * Обновляет контент заметки
@@ -78,35 +92,48 @@ const notepad = {
 
     // console.log(updatedContent);
 
-    const findFoId = this.findNoteById(id);
+    //////////////////////////////////////////////////
+
+    let findFoId = this.findNoteById(id);
     // console.log(findFoId);
 
-    const keysFindFoId = Object.keys(findFoId);
-    // console.log(kkk);
+    const changeYouNeed = { ...findFoId, ...updatedContent };
+    // console.log(changeYouNeed);
+    // console.log(changeYouNeed === findFoId);
 
-    const keysUpdatedContent = Object.keys(updatedContent);
-    // console.log(kkk2);
+    for (let i = 0; i < this.notes.length; i += 1) {
+      // console.log(this.notes[i]);
 
-    // const vvv = Object.values(findFoId);
-    // console.log(vvv);
+      // console.log(findFoId === this.notes[i]);
 
-    // for (const key of kkk) {
-    //   console.log(key);
-    //   for (const k of kkk2) {
-    //     console.log(k);
+      if (findFoId === this.notes[i]) {
+        this.notes.splice(i, 1, changeYouNeed);
+        return changeYouNeed;
+        // console.log(1111111111111);
+      }
+    }
+
+    // findFoId = { findFoId, ...updatedContent };
+    // console.log(findFoId);
+
+    // const keysFindFoId = Object.keys(findFoId);
+    // console.log(keysFindFoId);
+
+    // const keysUpdatedContent = Object.keys(updatedContent);
+    // // console.log(kkk2);
+
+    // for (const k of keysUpdatedContent) {
+    //   // console.log(k);
+    //   for (const key of keysFindFoId) {
+    //     // console.log(key);
+    //     if (k === key) {
+    //       findFoId[key] = updatedContent[k];
+    //       // console.log(11111111111);
+    //     }
     //   }
     // }
 
-    for (const k of keysUpdatedContent) {
-      // console.log(k);
-      for (const key of keysFindFoId) {
-        // console.log(key);
-        if (k === key) {
-          findFoId[key] = updatedContent[k];
-          // console.log(11111111111);
-        }
-      }
-    }
+    //////////////////////////////////////////////////
 
     // for (const key in findFoId) {
     //   // console.log(key);
@@ -123,6 +150,7 @@ const notepad = {
     //   }
     // }
   },
+
   updateNotePriority(id, priority) {
     /*
      * Обновляет приоритет заметки
@@ -137,7 +165,9 @@ const notepad = {
 
     findFoId.priority = priority;
     // console.log(findFoId.priority);
+    return findFoId;
   },
+
   filterNotesByQuery(query) {
     /*
      * Фильтрует массив заметок по подстроке query.
@@ -155,48 +185,77 @@ const notepad = {
       // console.log(keyNotes);
       // console.log("===============================");
 
-      for (const keyNote in keyNotes) {
-        if (keyNote === "title") {
-          // console.log(1);
-          // console.log(keyNotes[keyNote]);
+      ///////////////////////////////////////////////
 
-          const doLowerWord = keyNotes[keyNote].toLowerCase();
-          // console.log(doLowerWord);
+      // console.log(keyNotes.title);
+      const doArrayOfTitle = keyNotes.title.toLowerCase();
+      // console.log(doArrayOfTitle);
+      //
+      const isFindNeedNoteInTitle = doArrayOfTitle.includes(query);
+      // console.log(isFindNeedNoteInTitle);
 
-          const doArrayFoValue = doLowerWord.split(" ");
-          // console.log(doArrayFoValue);
-
-          let isFindNeedNote = doArrayFoValue.includes(query);
-          // console.log(isFindNeedNote);
-
-          if (isFindNeedNote) {
-            arrayYouNeed.push(keyNotes);
-            break;
-          }
-        }
-        if (keyNote === "body") {
-          // console.log(1);
-          // console.log(keyNotes[keyNote]);
-
-          const doLowerWord = keyNotes[keyNote].toLowerCase();
-          // console.log(doLowerWord);
-
-          const doArrayFoValue = doLowerWord.split(" ");
-          // console.log(doArrayFoValue);
-
-          let isFindNeedNote = doArrayFoValue.includes(query);
-          // console.log(isFindNeedNote);
-
-          if (isFindNeedNote) {
-            arrayYouNeed.push(keyNotes);
-            break;
-          }
-        }
+      if (isFindNeedNoteInTitle) {
+        arrayYouNeed.push(keyNotes);
+        break;
       }
+
+      // console.log(keyNotes.body);
+      const doArrayOfBody = keyNotes.body.toLowerCase();
+      // console.log(doArrayOfBody);
+
+      const isFindNeedNoteInBody = doArrayOfBody.includes(query);
+      // console.log(isFindNeedNoteInBody);
+
+      if (isFindNeedNoteInBody) {
+        arrayYouNeed.push(keyNotes);
+        break;
+      }
+
+      ///////////////////////////////////////////////
+
+      // for (const keyNote in keyNotes) {
+      //   if (keyNote === "title") {
+      //     // console.log(1);
+      //     console.log(keyNotes[keyNote]);
+
+      //     const doLowerWord = keyNotes[keyNote].toLowerCase();
+      //     console.log(doLowerWord);
+
+      //     const doArrayFoValue = doLowerWord.split(" ");
+      //     console.log(doArrayFoValue);
+
+      //     let isFindNeedNote = doArrayFoValue.includes(query);
+      //     // console.log(isFindNeedNote);
+
+      //     if (isFindNeedNote) {
+      //       arrayYouNeed.push(keyNotes);
+      //       break;
+      //     }
+      //   }
+      //   if (keyNote === "body") {
+      //     // console.log(1);
+      //     // console.log(keyNotes[keyNote]);
+
+      //     const doLowerWord = keyNotes[keyNote].toLowerCase();
+      //     // console.log(doLowerWord);
+
+      //     const doArrayFoValue = doLowerWord.split(" ");
+      //     // console.log(doArrayFoValue);
+
+      //     let isFindNeedNote = doArrayFoValue.includes(query);
+      //     // console.log(isFindNeedNote);
+
+      //     if (isFindNeedNote) {
+      //       arrayYouNeed.push(keyNotes);
+      //       break;
+      //     }
+      //   }
+      // }
     }
 
     return arrayYouNeed;
   },
+
   filterNotesByPriority(priority) {
     /*
      * Фильтрует массив заметок по значению приоритета
