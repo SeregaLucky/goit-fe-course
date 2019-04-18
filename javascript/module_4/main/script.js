@@ -15,9 +15,6 @@ const notepad = {
      * Возвращает: все заметки, значение свойства notes
      */
 
-    // const allNotes = this.notes;
-    // return allNotes;
-
     return this.notes;
   },
 
@@ -34,19 +31,6 @@ const notepad = {
         return elNote;
       }
     }
-
-    // for (const elNote of this.notes) {
-    //   console.log(elNote);
-    //   const value = Object.values(elNote);
-
-    //   for (const idElem of value) {
-    //     // console.log(idElem);
-
-    //     if (idElem === id) {
-    //       return elNote;
-    //     }
-    //   }
-    // }
   },
 
   saveNote(note) {
@@ -90,10 +74,6 @@ const notepad = {
      * Возвращает: обновленную заметку
      */
 
-    // console.log(updatedContent);
-
-    //////////////////////////////////////////////////
-
     let findFoId = this.findNoteById(id);
     // console.log(findFoId);
 
@@ -109,46 +89,8 @@ const notepad = {
       if (findFoId === this.notes[i]) {
         this.notes.splice(i, 1, changeYouNeed);
         return changeYouNeed;
-        // console.log(1111111111111);
       }
     }
-
-    // findFoId = { findFoId, ...updatedContent };
-    // console.log(findFoId);
-
-    // const keysFindFoId = Object.keys(findFoId);
-    // console.log(keysFindFoId);
-
-    // const keysUpdatedContent = Object.keys(updatedContent);
-    // // console.log(kkk2);
-
-    // for (const k of keysUpdatedContent) {
-    //   // console.log(k);
-    //   for (const key of keysFindFoId) {
-    //     // console.log(key);
-    //     if (k === key) {
-    //       findFoId[key] = updatedContent[k];
-    //       // console.log(11111111111);
-    //     }
-    //   }
-    // }
-
-    //////////////////////////////////////////////////
-
-    // for (const key in findFoId) {
-    //   // console.log(key);
-
-    //   for (const k in updatedContent) {
-    //     // console.log(k);
-
-    //     // обновляем заметки
-    //     if (k === key) {
-    //       // console.log(findFoId[key]);
-    //       // console.log(updatedContent[k]);
-    //       findFoId[key] = updatedContent[k];
-    //     }
-    //   }
-    // }
   },
 
   updateNotePriority(id, priority) {
@@ -160,8 +102,6 @@ const notepad = {
      */
 
     const findFoId = this.findNoteById(id);
-    // console.log(findFoId);
-    // console.log(priority);
 
     findFoId.priority = priority;
     // console.log(findFoId.priority);
@@ -177,22 +117,12 @@ const notepad = {
      * Возвращает: новый массив заметок, контент которых содержит подстроку
      */
 
-    // console.log(query);
-
     const arrayYouNeed = [];
 
     for (const keyNotes of this.notes) {
-      // console.log(keyNotes);
-      // console.log("===============================");
-
-      ///////////////////////////////////////////////
-
       // console.log(keyNotes.title);
       const doArrayOfTitle = keyNotes.title.toLowerCase();
-      // console.log(doArrayOfTitle);
-      //
       const isFindNeedNoteInTitle = doArrayOfTitle.includes(query);
-      // console.log(isFindNeedNoteInTitle);
 
       if (isFindNeedNoteInTitle) {
         arrayYouNeed.push(keyNotes);
@@ -201,56 +131,12 @@ const notepad = {
 
       // console.log(keyNotes.body);
       const doArrayOfBody = keyNotes.body.toLowerCase();
-      // console.log(doArrayOfBody);
-
       const isFindNeedNoteInBody = doArrayOfBody.includes(query);
-      // console.log(isFindNeedNoteInBody);
 
       if (isFindNeedNoteInBody) {
         arrayYouNeed.push(keyNotes);
         break;
       }
-
-      ///////////////////////////////////////////////
-
-      // for (const keyNote in keyNotes) {
-      //   if (keyNote === "title") {
-      //     // console.log(1);
-      //     console.log(keyNotes[keyNote]);
-
-      //     const doLowerWord = keyNotes[keyNote].toLowerCase();
-      //     console.log(doLowerWord);
-
-      //     const doArrayFoValue = doLowerWord.split(" ");
-      //     console.log(doArrayFoValue);
-
-      //     let isFindNeedNote = doArrayFoValue.includes(query);
-      //     // console.log(isFindNeedNote);
-
-      //     if (isFindNeedNote) {
-      //       arrayYouNeed.push(keyNotes);
-      //       break;
-      //     }
-      //   }
-      //   if (keyNote === "body") {
-      //     // console.log(1);
-      //     // console.log(keyNotes[keyNote]);
-
-      //     const doLowerWord = keyNotes[keyNote].toLowerCase();
-      //     // console.log(doLowerWord);
-
-      //     const doArrayFoValue = doLowerWord.split(" ");
-      //     // console.log(doArrayFoValue);
-
-      //     let isFindNeedNote = doArrayFoValue.includes(query);
-      //     // console.log(isFindNeedNote);
-
-      //     if (isFindNeedNote) {
-      //       arrayYouNeed.push(keyNotes);
-      //       break;
-      //     }
-      //   }
-      // }
     }
 
     return arrayYouNeed;
@@ -268,14 +154,7 @@ const notepad = {
     const arrayYouFind = [];
 
     for (const keyNotes of this.notes) {
-      // console.log(keyNotes);
-
-      const isFindNeedPriority = keyNotes.priority;
-      // console.log(isFindNeedPriority);
-
-      if (isFindNeedPriority === priority) {
-        // console.log(122);
-
+      if (keyNotes.priority === priority) {
         arrayYouFind.push(keyNotes);
       }
     }

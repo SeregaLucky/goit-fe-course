@@ -13,19 +13,30 @@ class Notepad {
 
   constructor(initialNotes) {
     this.notes = initialNotes;
-  }
-
-  static Priority() {
-    // return
-    // return (Priority = {
+    // this._Priority = {
     //   LOW: 0,
     //   NORMAL: 1,
     //   HIGH: 2
-    // });
-    // LOW = 0;
-    // NORMAL = 1;
-    // HIGH = 2;
+    // };
   }
+
+  static Priority = {
+    LOW: 0,
+    NORMAL: 1,
+    HIGH: 2
+  };
+
+  // static get Priority() {
+  //   // return 33;
+  //   // return (Priority = {
+  //   //   LOW: 0,
+  //   //   NORMAL: 1,
+  //   //   HIGH: 2
+  //   // });
+  //   // LOW = 0;
+  //   // NORMAL = 1;
+  //   const HIGH = 2;
+  // }
 
   // getNotes() {
   //   const allNotes = this.notes;
