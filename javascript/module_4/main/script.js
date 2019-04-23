@@ -126,7 +126,7 @@ const notepad = {
 
       if (isFindNeedNoteInTitle) {
         arrayYouNeed.push(keyNotes);
-        break;
+        continue;
       }
 
       // console.log(keyNotes.body);
@@ -135,7 +135,7 @@ const notepad = {
 
       if (isFindNeedNoteInBody) {
         arrayYouNeed.push(keyNotes);
-        break;
+        continue;
       }
     }
 
