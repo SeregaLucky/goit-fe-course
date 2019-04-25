@@ -87,149 +87,199 @@ const users = [
   }
 ];
 
-/*
- *
- * ---Задание 1---
- * Получить массив имен всех пользователей (поле name).
- *
- */
-const getAllNames = users => {
-  return users.map(user => user.name);
-};
+// /*
+//  *
+//  * ---Задание 1---
+//  * Получить массив имен всех пользователей (поле name).
+//  *
+//  */
+// const getAllNames = users => {
+//   return users.map(user => user.name);
+// };
 
-console.log(getAllNames(users));
-// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+// console.log(getAllNames(users));
+// // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
-/*
- *
- * ---Задание 2---
- * Получить массив объектов пользователей по цвету глаз (поле eyeColor).
- *
- */
-const getUsersByEyeColor = (users, color) => {
-  return users.filter(user => user.eyeColor === color);
-};
+// /*
+//  *
+//  * ---Задание 2---
+//  * Получить массив объектов пользователей по цвету глаз (поле eyeColor).
+//  *
+//  */
+// const getUsersByEyeColor = (users, color) => {
+//   return users.filter(user => user.eyeColor === color);
+// };
 
-console.log(getUsersByEyeColor(users, "blue"));
-// [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+// console.log(getUsersByEyeColor(users, "blue"));
+// // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
-/*
- *
- * ---Задание 3---
- * Получить массив имен пользователей по полу (поле gender).
- *
- */
-const getUsersByGender = (users, gender) => {
-  const arr = [];
+// /*
+//  *
+//  * ---Задание 3---
+//  * Получить массив имен пользователей по полу (поле gender).
+//  *
+//  */
+// const getUsersByGender = (users, gender) => {
+//   const arr = [];
 
-  users.forEach(user => {
-    if (user.gender === gender) {
-      arr.push(user.name);
-    }
-  });
+//   users.forEach(user => {
+//     if (user.gender === gender) {
+//       arr.push(user.name);
+//     }
+//   });
 
-  return arr;
-};
+//   return arr;
+// };
 
-console.log(getUsersByGender(users, "male"));
-// [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+// console.log(getUsersByGender(users, "male"));
+// // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
-/*
- *
- * ---Задание 4---
- * Получить массив только неактивных пользователей (поле isActive).
- *
- */
-const getInactiveUsers = users => {
-  return users.filter(user => !user.isActive);
-};
+// /*
+//  *
+//  * ---Задание 4---
+//  * Получить массив только неактивных пользователей (поле isActive).
+//  *
+//  */
+// const getInactiveUsers = users => {
+//   return users.filter(user => !user.isActive);
+// };
 
-console.log(getInactiveUsers(users));
-// [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+// console.log(getInactiveUsers(users));
+// // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 
-/*
- *
- * ---Задание 5---
- * Получить пользоваля (не массив) по email (поле email, он уникальный).
- *
- */
-const getUserByEmail = (users, email) => {
-  return users.find(user => user.email === email);
-};
+// /*
+//  *
+//  * ---Задание 5---
+//  * Получить пользоваля (не массив) по email (поле email, он уникальный).
+//  *
+//  */
+// const getUserByEmail = (users, email) => {
+//   return users.find(user => user.email === email);
+// };
 
-console.log(getUserByEmail(users, "shereeanthony@kog.com"));
-// {объект пользователя Sheree Anthony}
-console.log(getUserByEmail(users, "elmahead@omatom.com"));
-// {объект пользователя Elma Head}
+// console.log(getUserByEmail(users, "shereeanthony@kog.com"));
+// // {объект пользователя Sheree Anthony}
+// console.log(getUserByEmail(users, "elmahead@omatom.com"));
+// // {объект пользователя Elma Head}
 
-/*
- *
- * ---Задание 6---
- * Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age).
- *
- */
-const getUsersWithAge = (users, min, max) => {
-  return users.filter(user => min < user.age && max > user.age);
-};
+// /*
+//  *
+//  * ---Задание 6---
+//  * Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age).
+//  *
+//  */
+// const getUsersWithAge = (users, min, max) => {
+//   return users.filter(user => min < user.age && max > user.age);
+// };
 
-console.log(getUsersWithAge(users, 20, 30));
-// [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
+// console.log(getUsersWithAge(users, 20, 30));
+// // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
 
-console.log(getUsersWithAge(users, 30, 40));
-// [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
+// console.log(getUsersWithAge(users, 30, 40));
+// // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
 
-/*
- *
- * ---Задание 7---
- * Получить общую сумму баланса (поле balance) всех пользователей.
- *
- */
-const getTotalBalance = users => {
-  return users.reduce((acc, next) => acc + next.balance, 0);
-};
+// /*
+//  *
+//  * ---Задание 7---
+//  * Получить общую сумму баланса (поле balance) всех пользователей.
+//  *
+//  */
+// const getTotalBalance = users => {
+//   return users.reduce((acc, next) => acc + next.balance, 0);
+// };
 
-console.log(getTotalBalance(users)); // 20916
+// console.log(getTotalBalance(users)); // 20916
 
-/*
- *
- * ---Задание 8---
- * Массив имен всех пользователей у которых есть друг с указанным именем.
- *
- */
-const getUsersByFriend = (users, name) => {
-  const arr = [];
-  users.forEach(user => {
-    const isFindFriend = user.friends.find(friend => friend === name);
-    // console.log(isFindFriend);
+// /*
+//  *
+//  * ---Задание 8---
+//  * Массив имен всех пользователей у которых есть друг с указанным именем.
+//  *
+//  */
+// const getUsersByFriend = (users, name) => {
+//   const arr = [];
+//   users.forEach(user => {
+//     const isFindFriend = user.friends.find(friend => friend === name);
+//     // console.log(isFindFriend);
 
-    if (isFindFriend) {
-      arr.push(user.name);
-    }
-  });
+//     if (isFindFriend) {
+//       arr.push(user.name);
+//     }
+//   });
 
-  return arr;
-};
+//   return arr;
+// };
 
-console.log(getUsersByFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.log(getUsersByFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree Anthony' ]
+// console.log(getUsersByFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+// console.log(getUsersByFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree Anthony' ]
 
 ///////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////
 
 /*
  *
- * ---Дополнительное задание 1---
+ * ---Дополнительное задание 1.0---
  * Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке
  *
  */
-const getUniqueSkills = users => {
-  users.forEach(user => {
-    const arr = user.skills.reduce((acc, next) => acc + next, []);
-    console.log(arr);
-  });
+// const getUniqueSkills = users => {
+//   const array = [];
+//   users.forEach(user => {
+//     user.skills.forEach(skill => {
+//       if (!array.hasOwnProperty(skill)) {
+//         array.push(skill);
+//       }
+//     });
+//   });
 
-  // return arr;
+//   return array.sort();
+// };
+
+// console.log(getUniqueSkills(users));
+// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+//////////////////////
+// // ---Дополнительное задание 1.0---
+// const getUniqueSkills = users => {
+//   return users.reduce((arr, user) => {
+//     user.skills.forEach(skill => {
+//       if (!arr.hasOwnProperty(skill)) {
+//         arr.push(skill);
+//       }
+//     });
+
+//     return arr.sort();
+//   }, []);
+// };
+
+// console.log(getUniqueSkills(users));
+// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+// /////////////////
+
+/*
+ *
+ * ---Дополнительное задание 2---
+ * Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
+ *
+ */
+const getNamesSortedByFriendsCount = users => {
+  const arr = [];
+  const ttt = users.sort((a, b) => {
+    a.friends.length - b.friends.length;
+  });
+  return ttt;
 };
 
-console.log(getUniqueSkills(users));
-// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+console.log(getNamesSortedByFriendsCount(users));
+// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+
+// const userss = [
+//   { name: "Mango", daysActive: 15 },
+//   { name: "Poly", daysActive: 4 },
+//   { name: "Ajax", daysActive: 27 },
+//   { name: "Chelsey", daysActive: 2 }
+// ];
+
+// const sortByActiveDays = (a, b) => a.daysActive - b.daysActive;
+
+// console.log(userss.sort(sortByActiveDays));
