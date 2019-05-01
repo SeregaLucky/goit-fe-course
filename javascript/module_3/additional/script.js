@@ -183,6 +183,7 @@
 //
 // --8--
 // const filterFromArray = function(arr) {
+//   console.log(arguments);
 //   const newArrey = arr;
 //   // console.log(newArrey);
 //   for (let element of arguments) {
@@ -203,3 +204,19 @@
 // console.log(filterFromArray([1, 2, 3, 4, 5], 2, 4)); // [1, 3, 5]
 // console.log(filterFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)); // [12, 8, 17]
 
+let newArray = [];
+const filterFromArray = function(arr) {
+  console.log(arr);
+  console.log(arguments);
+  for (let i = 1; i < arguments.length; i += 1) {
+    console.log(arguments[i]);
+
+    let isInclude = arr.includes(arguments[i]);
+    console.log(isInclude);
+    if (!isInclude) {
+      newArray.push(arr[i]);
+    }
+  }
+  return newArray;
+};
+console.log(filterFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4));

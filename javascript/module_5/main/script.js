@@ -3,7 +3,7 @@
 // Конструктор Notepad при инициализации принимает массив заметок
 const Notepad = function Notepad(notes = []) {
   // Перенеси свойства и методы объекта notepad в конструктор
-  this.notes = [];
+  this.notes = notes;
 
   this.getNotes = function() {
     return this.notes;

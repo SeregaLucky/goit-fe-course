@@ -11,37 +11,15 @@ class Notepad {
    * Добавь статическое свойство Priority используя ключевое слово static
    */
 
-  constructor(initialNotes) {
-    this.notes = initialNotes;
-    // this._Priority = {
-    //   LOW: 0,
-    //   NORMAL: 1,
-    //   HIGH: 2
-    // };
-  }
-
   static Priority = {
     LOW: 0,
     NORMAL: 1,
     HIGH: 2
   };
 
-  // static get Priority() {
-  //   // return 33;
-  //   // return (Priority = {
-  //   //   LOW: 0,
-  //   //   NORMAL: 1,
-  //   //   HIGH: 2
-  //   // });
-  //   // LOW = 0;
-  //   // NORMAL = 1;
-  //   const HIGH = 2;
-  // }
-
-  // getNotes() {
-  //   const allNotes = this.notes;
-  //   return allNotes;
-  // }
+  constructor(initialNotes) {
+    this.notes = initialNotes;
+  }
 
   get getNotes() {
     const _notes = this.notes;
@@ -50,75 +28,64 @@ class Notepad {
 
   findNoteById(id) {
     for (const elNote of this.notes) {
-      const value = Object.values(elNote);
-
-      for (const idElem of value) {
-        if (idElem === id) {
-          return elNote;
-        }
+      if (elNote.id === id) {
+        return elNote;
       }
     }
   }
 
   saveNote(note) {
     this.notes.push(note);
+    return note;
   }
 
   deleteNote(id) {
-    const delFoId = this.findNoteById(id);
+    const findFoId = this.findNoteById(id);
 
     for (let i = 0; i < this.notes.length; i += 1) {
-      // console.log(this.notes[i]);
-
-      if (this.notes[i] === delFoId) {
+      if (this.notes[i] === findFoId) {
         this.notes.splice(i, 1);
       }
     }
   }
 
   updateNoteContent(id, updatedContent) {
-    const findFoId = this.findNoteById(id);
+    let findFoId = this.findNoteById(id);
+    const changeYouNeed = { ...findFoId, ...updatedContent };
 
-    for (const key in findFoId) {
-      for (const k in updatedContent) {
-        // обновляем заметки
-        if (k === key) {
-          findFoId[key] = updatedContent[k];
-        }
+    for (let i = 0; i < this.notes.length; i += 1) {
+      if (findFoId === this.notes[i]) {
+        this.notes.splice(i, 1, changeYouNeed);
+        return changeYouNeed;
       }
     }
   }
 
   updateNotePriority(id, priority) {
     const findFoId = this.findNoteById(id);
+
     findFoId.priority = priority;
+    return findFoId;
   }
 
   filterNotesByQuery(query) {
     const arrayYouNeed = [];
 
     for (const keyNotes of this.notes) {
-      for (const keyNote in keyNotes) {
-        if (keyNote === "title") {
-          const doLowerWord = keyNotes[keyNote].toLowerCase();
-          const doArrayFoValue = doLowerWord.split(" ");
-          let isFindNeedNote = doArrayFoValue.includes(query);
+      const doArrayOfTitle = keyNotes.title.toLowerCase();
+      const isFindNeedNoteInTitle = doArrayOfTitle.includes(query);
 
-          if (isFindNeedNote) {
-            arrayYouNeed.push(keyNotes);
-            break;
-          }
-        }
-        if (keyNote === "body") {
-          const doLowerWord = keyNotes[keyNote].toLowerCase();
-          const doArrayFoValue = doLowerWord.split(" ");
-          let isFindNeedNote = doArrayFoValue.includes(query);
+      if (isFindNeedNoteInTitle) {
+        arrayYouNeed.push(keyNotes);
+        continue;
+      }
 
-          if (isFindNeedNote) {
-            arrayYouNeed.push(keyNotes);
-            break;
-          }
-        }
+      const doArrayOfBody = keyNotes.body.toLowerCase();
+      const isFindNeedNoteInBody = doArrayOfBody.includes(query);
+
+      if (isFindNeedNoteInBody) {
+        arrayYouNeed.push(keyNotes);
+        continue;
       }
     }
 
@@ -129,9 +96,7 @@ class Notepad {
     const arrayYouFind = [];
 
     for (const keyNotes of this.notes) {
-      const isFindNeedPriority = keyNotes.priority;
-
-      if (isFindNeedPriority === priority) {
+      if (keyNotes.priority === priority) {
         arrayYouFind.push(keyNotes);
       }
     }
