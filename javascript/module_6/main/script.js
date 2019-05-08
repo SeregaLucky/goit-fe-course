@@ -18,12 +18,16 @@ class Notepad {
   };
 
   constructor(initialNotes) {
-    this.notes = initialNotes;
+    this._notes = initialNotes;
   }
 
-  get getNotes() {
-    const _notes = this.notes;
-    return _notes;
+  //get getNotes() {
+  //const _notes = this.notes;
+  //return _notes;
+  //}
+
+  get notes() {
+    return this._notes;
   }
 
   findNoteById(id) {

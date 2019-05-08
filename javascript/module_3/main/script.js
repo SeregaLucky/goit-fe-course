@@ -12,8 +12,7 @@ const isLoginValid = function(login) {
 
 // Проверяет что бы новый логин был с уникальным названием
 const isLoginUnique = function(allLogins, login) {
-  const isLogRepeat = allLogins.includes(login);
-  const isLogUnique = !isLogRepeat;
+  const isLogUnique = !allLogins.includes(login);
 
   return isLogUnique;
 };
@@ -21,19 +20,18 @@ const isLoginUnique = function(allLogins, login) {
 // Добавляет логин если отвечает требованиям по количеству символов и если уникальный
 const addLogin = function(allLogins, login) {
   const isSuitLogLength = isLoginValid(login);
+  const isSuitLogUnique = isLoginUnique(allLogins, login);
+
   if (!isSuitLogLength) {
     console.log("Ошибка! Логин должен быть от 4 до 16 символов");
     return;
-  }
-
-  const isSuitLogUnique = isLoginUnique(allLogins, login);
-  if (!isSuitLogUnique) {
+  } else if (!isSuitLogUnique) {
     console.log("Такой логин уже используется!");
     return;
+  } else {
+    allLogins.push(login);
+    console.log("Логин успешно добавлен!");
   }
-
-  allLogins.push(login);
-  console.log("Логин успешно добавлен!");
 };
 
 // Вызовы функции для проверки

@@ -61,25 +61,25 @@ if (numbers2.length) {
   alert(`Общая сумма чисел равна ${total2}`);
 }
 
-// // ---2---
-// const passwords = ["qwerty", "111qwe", "123123", "r4nd0mp4zzw0rd"];
-// let attempts = 3;
+// ---2---
+const passwords = ["qwerty", "111qwe", "123123", "r4nd0mp4zzw0rd"];
+let attempts = 3;
 
-// do {
-  // const askPassword = prompt("Введите свой пароль");
+do {
+  const askPassword = prompt("Введите свой пароль");
 
-  // let isFindPassword = passwords.includes(askPassword);
+  let isFindPassword = passwords.includes(askPassword);
 
-  // attempts -= 1;
+  attempts -= 1;
 
-  // if (askPassword === null) {
-    // break;
-  // } else if (isFindPassword) {
-    // alert("Добро пожаловать!");
-    // break;
-  // } else if (attempts >= 1) {
-    // alert(`Неверный пароль, у вас осталось ${attempts} попыток`);
-  // } else {
-    // alert("У вас закончились попытки, аккаунт заблокирован!");
-  // }
-// } while (attempts >= 1);
+  if (askPassword === null) {
+    break;
+  } else if (isFindPassword) {
+    alert("Добро пожаловать!");
+    break;
+  } else if (attempts >= 1) {
+    alert(`Неверный пароль, у вас осталось ${attempts} попыток`);
+  } else {
+    alert("У вас закончились попытки, аккаунт заблокирован!");
+  }
+} while (attempts >= 1);
