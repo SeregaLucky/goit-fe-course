@@ -222,20 +222,38 @@ console.log(getUsersByFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree
 //////////////////////
 
 // ---Дополнительное задание 1.0---
-const getUniqueSkills = users => {
-  return users.reduce((arr, user) => {
-    user.skills.forEach(skill => {
-      if (!arr.hasOwnProperty(skill)) {
-        arr.push(skill);
-      }
-    });
+// const getUniqueSkills = users => {
+//   return users.reduce((arr, user) => {
+//     return user.skills.forEach(skill => {
+//       if (!arr.hasOwnProperty(skill)) {
+//         arr.push(skill);
+//         return arr;
+//       }
+//     });
 
-    return arr.sort();
-  }, []);
-};
+//     // return arr.sort();
+//   }, []);
+// };
 
+// console.log(getUniqueSkills(users));
+// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+//////////////////////
+//////////////////////
+
+const getUniqueSkills = users =>
+  users
+    .reduce((arr, user) => {
+      arr.push(...user.skills);
+      return arr;
+    }, [])
+    .sort()
+    .filter((skill, idx, array) => skill !== array[idx + 1]);
 console.log(getUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+//////////////////////
+//////////////////////
 
 /*
  *
@@ -246,11 +264,9 @@ console.log(getUniqueSkills(users));
 const getNamesSortedByFriendsCount = users => {
   users = [...users];
 
-  const usersSort = users.sort((a, b) => {
-    return a.friends.length - b.friends.length;
-  });
-
-  return usersSort.map(user => user.name);
+  return users
+    .sort((a, b) => a.friends.length - b.friends.length)
+    .map(user => user.name);
 };
 
 console.log(getNamesSortedByFriendsCount(users));
