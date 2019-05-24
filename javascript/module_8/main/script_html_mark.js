@@ -164,6 +164,15 @@ function muchDoGood(arrResult) {
   // Что бы виделить првельные и не правельные ответы при нажатии на кнопку
   let countTrueShow = 0;
   bbb.forEach(input => {
+    const findPerentInput = input.closest(".item");
+    if (findPerentInput === null) return;
+
+    if (findPerentInput.classList.contains("good")) {
+      findPerentInput.classList.remove("good");
+    } else if (findPerentInput.classList.contains("bad")) {
+      findPerentInput.classList.remove("bad");
+    }
+
     if (input.checked) {
       if (Number(input.value) === arrayRightAnswers[countTrueShow]) {
         input.closest(".item").classList.add("good");

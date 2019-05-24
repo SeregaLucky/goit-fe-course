@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JS_main 7</title>
-</head>
-<body>
-    
-	
-	
-	<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homework 9</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- В этот список добавляй элементы галереи -->
+    <ul class="gallery js-gallery"></ul>
+
+    <!--
+      Модальное окно для полноразмерного изображения
+      Для того чтобы открыть, необходимо добавить на div.overlay CSS-класс is-visible
+    -->
+    <div class="overlay js-overlay">
+      <div class="content">
+        <button
+          type="button"
+          class="content__button js-content__button"
+          data-action="close-modal"
+        >
+          <i class="material-icons">close</i>
+        </button>
+
+        <img src="" alt="" />
+      </div>
+    </div>
+
+    <script src="gallery-items.js" type="module"></script>
+    <script src="script_html_mark.js" type="module"></script>
+  </body>
 </html>
