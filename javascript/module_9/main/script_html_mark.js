@@ -7,7 +7,6 @@ import arrayImages from "./gallery-items.js";
 const gallery = document.querySelector(".js-gallery");
 
 // Шаблон 1 ли
-// console.log(creatItemMarkup(arrayImages[0]));
 function creatItemMarkup({ preview, original, description }) {
   const itemMarkup = `
   <li class="gallery__item">
@@ -17,7 +16,8 @@ function creatItemMarkup({ preview, original, description }) {
   />
     <img
       class="gallery__image"
-      src=${preview}
+      src=""
+      data-smallsrc=${preview}
       data-source=${original}
       alt=${description}
     />
@@ -33,18 +33,12 @@ function creatItemMarkup({ preview, original, description }) {
 }
 
 // Создает все ли с картинками
-// console.log(creatAllItemMarkup(arrayImages));
 function creatAllItemMarkup(images) {
   return images.reduce(
     (allImages, image) => (allImages += creatItemMarkup(image)),
     ""
   );
 }
-
-// console.log(creatAllItemMarkup2(arrayImages));
-// function creatAllItemMarkup2(images) {
-//   return images.map(image => creatItemMarkup(image)).join("");
-// }
 
 const allMarkupLi = creatAllItemMarkup(arrayImages);
 
@@ -69,7 +63,6 @@ btnCloseModal.addEventListener("click", closeModal);
 
 function handleClick(e) {
   e.preventDefault();
-  // console.log(e.target);
   const target = e.target;
 
   if (target === e.currentTarget) return;
@@ -107,3 +100,39 @@ function handleKeyPress(e) {
 
   closeModal();
 }
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+/*
+ * Делаем "ленивую" загрузку картинок
+ */
+
+const lazyLoad = target => {
+  const options = {
+    rootMargin: "150px 0px"
+  };
+
+  const ioObs = new IntersectionObserver((entryes, observer) => {
+    entryes.forEach(entry => {
+      console.log(entry);
+
+      if (entry.isIntersecting) {
+        // console.log(entry);
+        const img = entry.target;
+        const smallSrc = img.dataset.smallsrc;
+        img.src = smallSrc;
+
+        observer.disconnect();
+      }
+    });
+  }, options);
+
+  ioObs.observe(target);
+};
+
+const allImages = document.querySelectorAll(".gallery__image");
+
+allImages.forEach(image => lazyLoad(image));
