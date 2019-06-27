@@ -35,7 +35,7 @@ class CountdownTimer {
         console.log("STOP");
         return;
       }
-      // console.log(11111111111111111111111111111111111111111);
+      console.log("If see timer do not stop");
 
       this.timeLeft(time);
     }, 1000);
@@ -75,12 +75,12 @@ class CountdownTimer {
   }
 
   markupUpdateOnline(days, hours, mins, secs) {
-    const daysString = this.pad(days);
+    // const daysString = this.pad(days);
     const hoursString = this.pad(hours);
     const minsString = this.pad(mins);
     const secsString = this.pad(secs);
 
-    this.refs.days.textContent = daysString;
+    this.refs.days.textContent = days;
     this.refs.hours.textContent = hoursString;
     this.refs.mins.textContent = minsString;
     this.refs.secs.textContent = secsString;
@@ -92,10 +92,8 @@ class CountdownTimer {
 }
 
 //
-const countdownTimer = new CountdownTimer({
+new CountdownTimer({
   selector: "#timer-1",
   targetDate: new Date("Jul 17, 2019")
-  // targetDate: new Date(1561022460000)
+  // targetDate: new Date(1561892460000)
 });
-
-// console.log(6 % 5);
